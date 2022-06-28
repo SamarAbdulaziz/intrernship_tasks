@@ -31,7 +31,6 @@ class OnBoardingScreen extends StatelessWidget {
           ' your area carefully selected',
     ),
   ];
-bool isLast=false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -68,7 +67,6 @@ bool isLast=false;
               mainAxisAlignment: MainAxisAlignment.center,
               children: const [
                 Text(
-
                   '7',
                   style: TextStyle(
                     fontSize: 40.0,
@@ -90,11 +88,6 @@ bool isLast=false;
             Expanded(
               child: PageView.builder(
                 controller: _pageController,
-                onPageChanged: (index){
-                  if(index==boardingItems.length-1){
-
-                  }
-                },
                 itemBuilder: (
                     BuildContext context, index) =>
                     onBordingItem(boardingItems[index]),
