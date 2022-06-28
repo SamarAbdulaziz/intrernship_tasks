@@ -31,7 +31,7 @@ class OnBoardingScreen extends StatelessWidget {
           ' your area carefully selected',
     ),
   ];
-
+bool isLast=false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -56,6 +56,7 @@ class OnBoardingScreen extends StatelessWidget {
               ),
             ),
           ),
+          const SizedBox(width: 10,),
         ],
       ),
       body: Padding(
@@ -89,6 +90,11 @@ class OnBoardingScreen extends StatelessWidget {
             Expanded(
               child: PageView.builder(
                 controller: _pageController,
+                onPageChanged: (index){
+                  if(index==boardingItems.length-1){
+
+                  }
+                },
                 itemBuilder: (
                     BuildContext context, index) =>
                     onBordingItem(boardingItems[index]),
@@ -117,13 +123,13 @@ class OnBoardingScreen extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text(
+                const Text(
                   'Don\'t have an account?',
                   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16.0),
                 ),
                 TextButton(
                   onPressed: () {},
-                  child: Text('Sign Up'),
+                  child: const Text('Sign Up'),
                 )
               ],
             ),
@@ -157,7 +163,7 @@ class OnBoardingScreen extends StatelessWidget {
               color: Colors.black54,
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 10.0,
           ),
         ],
