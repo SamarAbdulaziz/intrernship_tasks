@@ -35,6 +35,7 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   country_code_picker: ^2.0.2
+  smooth_page_indicator: ^1.0.0+2
 
 dev_dependencies:
   flutter_test:
@@ -78,6 +79,9 @@ flutter:
     - family: Lora
       fonts:
         - asset: assets/fonts/Lora/Lora-Bold.ttf
+    - family: Ubuntu
+      fonts:
+        - asset: assets/fonts/Ubuntu/Ubuntu-Bold.ttf
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
   #   - family: Trajan Pro

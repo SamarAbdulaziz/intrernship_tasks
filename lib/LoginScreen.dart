@@ -1,5 +1,6 @@
 import 'package:country_code_picker/country_code_picker.dart';
 import 'package:flutter/material.dart';
+import 'package:internship_projects/registerScreen.dart';
 import 'package:internship_projects/sharedWidgets.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -104,6 +105,8 @@ class LoginScreen extends StatelessWidget {
                       ),
                       TextButton(
                         onPressed: () {
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>RegisterScreen()));
+
                         },
                         child: const Text('Register here'),
                       )

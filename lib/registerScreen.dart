@@ -3,9 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:internship_projects/sharedWidgets.dart';
 
 import 'LoginScreen.dart';
-
-class RegisterWithSlivers extends StatelessWidget {
-  const RegisterWithSlivers({Key? key}) : super(key: key);
+class RegisterScreen extends StatelessWidget {
+  const RegisterScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -165,7 +164,6 @@ class RegisterWithSlivers extends StatelessWidget {
                         ),
                       ),
                       TextButton(onPressed: (){
-                        Navigator.push(context, MaterialPageRoute(builder: (context)=>RegisterWithSlivers()));
                       },
                         child: Container(
                           alignment: Alignment.center,
