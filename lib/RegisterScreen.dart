@@ -58,19 +58,32 @@ class RegisterScreen extends StatelessWidget {
                   const SizedBox(
                     height: 10.0,
                   ),
-                  Row(
-                    children: [
-                      CountryCodePicker(
-                        initialSelection: 'eg',
-                        showFlag: false,
-                      ),
-                      Expanded(
-                        child: MyTextFormFeild(
-                            hint: '1023456789',
-                            keyboardtype: TextInputType.phone
+                  Container(
+                    decoration: BoxDecoration(
+                      border: Border.all(color: Colors.grey),
+                    ),
+                    child: Row(
+                      children: [
+                        CountryCodePicker(
+                          initialSelection: 'eg',
+                          showFlag: false,
                         ),
-                      ),
-                    ],
+                        Expanded(
+                          child: TextFormField(
+                            keyboardType: TextInputType.phone,
+                            decoration: const InputDecoration(
+                              hintText: '1023456789',
+                              border: OutlineInputBorder(
+                                  borderSide: BorderSide.none),
+                            ),
+                          ),
+                          // MyTextFormFeild(
+                          //     hint: '1023456789',
+                          //     keyboardtype: TextInputType.phone
+                          // )
+                        ),
+                      ],
+                    ),
                   ),
                   const SizedBox(
                     height: 10.0,

@@ -29,7 +29,8 @@ Widget signInByGoogleButton() => Container(
       width: double.infinity,
       child: OutlinedButton(
         style: OutlinedButton.styleFrom(
-            side: const BorderSide(color: Colors.blue)),
+            side: const BorderSide(color: Colors.blue),
+        ),
         onPressed: () {},
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
