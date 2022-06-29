@@ -52,7 +52,7 @@ class OnBoardingScreen extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => LoginScreen(),
+                    builder: (context) => const LoginScreen(),
                   ),
                 );
               },
@@ -107,10 +107,13 @@ class OnBoardingScreen extends StatelessWidget {
             //
             SmoothPageIndicator(
               controller: _pageController,
-              effect: const ExpandingDotsEffect(
-                activeDotColor: Colors.orange,
-                dotWidth: 10.0,
-              ),
+              effect: const SlideEffect(
+                spacing: 8,
+                radius: 4,
+                dotWidth: 24,
+                dotHeight: 5,
+                activeDotColor: Colors.orange
+              ) ,
               count: boardingItems.length,
             ),
             const SizedBox(
@@ -123,7 +126,7 @@ class OnBoardingScreen extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => LoginScreen(),
+                      builder: (context) => const LoginScreen(),
                     ),
                   );
                 },
@@ -179,3 +182,7 @@ class OnBoardingScreen extends StatelessWidget {
         ],
       );
 }
+/*ExpandingDotsEffect(
+                activeDotColor: Colors.orange,
+                dotWidth: 10.0,
+              )*/
