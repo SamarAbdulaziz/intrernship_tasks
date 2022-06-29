@@ -99,28 +99,46 @@ class RegisterWithSlivers extends StatelessWidget {
                       ),
                       const SizedBox(
                         height: 10.0,
+                  ),
+                  MyTextFormFeild(
+                      hint: 'password',
+                      icon: Icons.visibility,
+                      keyboardtype: TextInputType.visiblePassword),
+                  const SizedBox(
+                    height: 10.0,
+                  ),
+                  myElevatedButton(text: 'Register'),
+                  Row(
+                    children: [
+                      Expanded(
+                        child: Container(
+                          height: 0.5,
+                          color: Colors.grey,
+                        ),
                       ),
-                      MyTextFormFeild(
-                          hint: 'password',
-                          icon: Icons.visibility,
-                          keyboardtype: TextInputType.visiblePassword
+                      const Text(
+                        '       Or      ',
+                        style: TextStyle(color: Colors.grey, fontSize: 18.0),
                       ),
-                      const SizedBox(
-                        height: 10.0,
+                      Expanded(
+                        child: Container(
+                          height: 0.5,
+                          color: Colors.grey,
+                        ),
                       ),
-                      myElevatedButton(text: 'Register'),
-                      Image.asset('assets/images/or.png'),
-                      signInByGoogleButton(),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          const Text(
-                            'Has any account?',
-                            style: TextStyle(
-                              color: Colors.black,
-                            ),
-                          ),
-                          TextButton(
+                    ],
+                  ),
+                  signInByGoogleButton(),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      const Text(
+                        'Has any account?',
+                        style: TextStyle(
+                          color: Colors.black,
+                        ),
+                      ),
+                      TextButton(
                             onPressed: () {
                               Navigator.push(
                                 context,

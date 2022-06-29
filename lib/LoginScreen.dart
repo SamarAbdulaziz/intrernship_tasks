@@ -63,10 +63,6 @@ class LoginScreen extends StatelessWidget {
                                   borderSide: BorderSide.none),
                             ),
                           ),
-                          // MyTextFormFeild(
-                          //     hint: '1023456789',
-                          //     keyboardtype: TextInputType.phone
-                          // )
                         ),
                       ],
                     ),
@@ -75,7 +71,28 @@ class LoginScreen extends StatelessWidget {
                     height: 10.0,
                   ),
                   myElevatedButton(text: 'Sign In'),
-                  Image.asset('assets/images/or.png'),
+                  Row(
+                    children: [
+                      Expanded(
+                        child: Container(
+                          height: 0.5,
+                          color: Colors.grey,
+                        ),
+                      ),
+                      const Text(
+                        '       Or      ',
+                        style: TextStyle(
+                            color: Colors.grey,
+                            fontSize: 18.0),
+                      ),
+                      Expanded(
+                        child: Container(
+                          height: 0.5,
+                          color: Colors.grey,
+                        ),
+                      ),
+                    ],
+                  ),
                   signInByGoogleButton(),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
