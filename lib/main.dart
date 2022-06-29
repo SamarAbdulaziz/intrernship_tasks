@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:internship_projects/LoginScreen.dart';
+
 void main() {
   runApp(const MyApp());
 }
