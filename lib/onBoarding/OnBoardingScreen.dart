@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:internship_projects/LoginScreen.dart';
+import 'package:internship_projects/Login_Register/LoginScreen.dart';
+import 'package:internship_projects/onBoarding/sharedWidgets/myColors.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class BoardingModel {
@@ -44,7 +45,8 @@ class OnBoardingScreen extends StatelessWidget {
           Container(
             padding: const EdgeInsets.all(8.0),
             decoration: BoxDecoration(
-              color: Colors.yellow[300],
+              color: Colors.orange[100],
+              //Color(0xFFfaf3e5) from the color picker but it's very pale ,
               borderRadius: BorderRadius.circular(20.0),
             ),
             child: TextButton(
@@ -76,23 +78,27 @@ class OnBoardingScreen extends StatelessWidget {
           children: [
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: const [
-                Text(
-                  '7',
-                  style: TextStyle(
-                    fontSize: 40.0,
-                    fontFamily: 'Ubuntu',
-                    color: Colors.orange,
+              children: [
+                RichText(
+                  text:  TextSpan(
+                    text: '7',
+                    style: TextStyle(
+                      fontSize: 40.0,
+                      fontFamily: 'Ubuntu',
+                      color: Colors.orange,
+                    ),
+                    children: [
+                      TextSpan(
+                        text: 'Krave',
+                        style: TextStyle(
+                          fontSize: 40.0,
+                          fontFamily: 'Ubuntu',
+                          color: KPrimaryColor, //Color(0xFFfaf3e5),
+                        ),
+                      ),
+                    ],
                   ),
-                ),
-                Text(
-                  'Krave',
-                  style: TextStyle(
-                    fontSize: 40.0,
-                    fontFamily: 'Ubuntu',
-                    color: Colors.blue,
-                  ),
-                ),
+                )
               ],
             ),
             //
@@ -112,8 +118,9 @@ class OnBoardingScreen extends StatelessWidget {
                 radius: 4,
                 dotWidth: 24,
                 dotHeight: 5,
-                activeDotColor: Colors.orange
-              ) ,
+                activeDotColor: Colors.orange,
+                //Color(0xFFfaf3e5),
+              ),
               count: boardingItems.length,
             ),
             const SizedBox(
@@ -131,6 +138,7 @@ class OnBoardingScreen extends StatelessWidget {
                   );
                 },
                 child: const Text('Get Started'),
+                style: ElevatedButton.styleFrom(primary: KPrimaryColor),
               ),
             ),
             Row(
@@ -138,7 +146,7 @@ class OnBoardingScreen extends StatelessWidget {
               children: [
                 const Text(
                   'Don\'t have an account?',
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16.0),
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14.0),
                 ),
                 TextButton(
                   onPressed: () {},
@@ -161,7 +169,7 @@ class OnBoardingScreen extends StatelessWidget {
             'Get food delivery to your doorstep asap',
             textAlign: TextAlign.center,
             style: TextStyle(
-              fontSize: 28.0,
+              fontSize: 24.0,
               fontWeight: FontWeight.bold,
             ),
           ),
@@ -172,7 +180,7 @@ class OnBoardingScreen extends StatelessWidget {
             '${item.subtitle}',
             textAlign: TextAlign.center,
             style: const TextStyle(
-              fontSize: 18.0,
+              fontSize: 16.0,
               color: Colors.black54,
             ),
           ),
@@ -183,6 +191,21 @@ class OnBoardingScreen extends StatelessWidget {
       );
 }
 /*ExpandingDotsEffect(
-                activeDotColor: Colors.orange,
-                dotWidth: 10.0,
-              )*/
+activeDotColor: Colors.orange,
+dotWidth: 10.0,)*/
+// const Text(
+//   '7',
+//   style: TextStyle(
+//     fontSize: 40.0,
+//     fontFamily: 'Ubuntu',
+//     color: Colors.orange,
+//   ),
+// ),
+// Text(
+//   'Krave',
+//   style: TextStyle(
+//     fontSize: 40.0,
+//     fontFamily: 'Ubuntu',
+//     color: KPrimaryColor, //Color(0xFFfaf3e5),
+//   ),
+// ),

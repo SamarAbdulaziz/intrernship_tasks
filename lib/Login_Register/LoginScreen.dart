@@ -1,7 +1,7 @@
 import 'package:country_code_picker/country_code_picker.dart';
 import 'package:flutter/material.dart';
-import 'package:internship_projects/registerScreen.dart';
-import 'package:internship_projects/sharedWidgets.dart';
+import 'package:internship_projects/Login_Register/registerScreen.dart';
+import 'package:internship_projects/Login_Register/sharedWidgets.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({Key? key}) : super(key: key);

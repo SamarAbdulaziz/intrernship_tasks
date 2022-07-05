@@ -1,11 +1,18 @@
 import 'package:flutter/material.dart';
+class MyTextFormFeild extends StatelessWidget {
+  String hint;
+  IconData? icon;
+  TextInputType keyboardtype;
 
-Widget MyTextFormFeild({
-  required String hint,
-  IconData? icon,
-  required TextInputType keyboardtype,
-}) =>
-    TextFormField(
+  MyTextFormFeild({
+    required this.hint,
+    this.icon,
+    required this.keyboardtype,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return TextFormField(
       decoration: InputDecoration(
         hintText: hint,
         suffixIcon: Icon(
@@ -22,8 +29,10 @@ Widget MyTextFormFeild({
           borderSide: BorderSide(color: Colors.grey),
         ),
       ),
-      keyboardType:keyboardtype,
+      keyboardType: keyboardtype,
     );
+  }
+}
 
 Widget signInByGoogleButton() => Container(
       width: double.infinity,
